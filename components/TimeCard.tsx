@@ -23,18 +23,24 @@ function TimeCard({ title, time, unit }) {
       </div>
       <div
         className="absolute top-10 flex h-36
-    w-80 flex-col rounded-2xl bg-blue-900 sm:h-44"
+    w-80 cursor-pointer flex-col rounded-2xl bg-[#1c1f4a] hover:bg-[#292f70] sm:h-44"
       >
         <div className="flex items-center justify-between px-6 pt-6 sm:mx-4">
           <h1 className="font-white text-lg font-bold text-white sm:font-normal">
             {title}
           </h1>
           <div className="relative h-2 w-4">
-            <Image
-              src="/images/icon-ellipsis.svg"
-              layout="fill"
-              objectFit="contain"
-            />
+            <svg
+              className="fill-[#BBC0FF] hover:fill-white"
+              width="21"
+              height="5"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill-rule="evenodd"
+              />
+            </svg>
           </div>
         </div>
 
