@@ -14,13 +14,13 @@ function Dashboard() {
   }
 
   return (
-    <main className="mb-16 grid grid-cols-1 space-y-20">
-      <section className="relative mx-auto flex flex-col">
+    <main className="mb-16 grid grid-cols-1 gap-y-20 sm:grid-cols-6">
+      <section className="relative mx-auto flex flex-col sm:col-span-1 sm:col-start-2 sm:mr-2">
         <div
-          className="z-50 flex h-36 w-80
-        items-center gap-x-6 rounded-2xl bg-blue-500 p-4"
+          className="z-50 flex h-36 w-80 items-center
+        gap-x-6 rounded-2xl bg-blue-500 p-4 sm:h-80 sm:flex-col sm:place-items-start"
         >
-          <div className="relative h-20 w-20 rounded-full border-2 border-white">
+          <div className="relative h-20 w-20 rounded-full border-2 border-white sm:mt-5 sm:ml-4 sm:h-28 sm:w-28 sm:border-4">
             <Image
               objectFit="contain"
               src="/images/image-jeremy.png"
@@ -29,19 +29,23 @@ function Dashboard() {
           </div>
           <div>
             <h2
-              className="text-xl
-            text-white opacity-60"
+              className="text-xl text-white
+            opacity-60 sm:ml-4 sm:mt-6 sm:text-sm"
             >
               Report for
             </h2>
-            <h1 className="text-2xl text-white">Jeremy Robson</h1>
+            <h1 className="text-2xl text-white sm:hidden">Jeremy Robson</h1>
+            <div className="ml-4 hidden flex-col text-4xl text-white sm:inline-flex">
+              <h1>Jeremy</h1>
+              <h1>Robson</h1>
+            </div>
           </div>
         </div>
         <div
-          className="absolute top-16 flex h-36
-        w-80 flex-col justify-end rounded-2xl bg-blue-900"
+          className="absolute top-16 flex h-36 w-80
+        flex-col justify-end rounded-2xl bg-blue-900 sm:top-36 sm:-mt-2 sm:h-80"
         >
-          <div className="flex justify-between py-5 px-6 text-xl text-white">
+          <div className="flex justify-between py-5 px-6 text-xl text-white sm:-mb-2 sm:ml-2 sm:flex-col sm:gap-y-4">
             <h2 className={`opacity-${category === 'daily' ? 100 : 60}`}>
               Daily
             </h2>
@@ -55,7 +59,7 @@ function Dashboard() {
         </div>
       </section>
 
-      <section className="gridcols-1 relative mx-auto grid gap-y-12">
+      <section className="gridcols-1 relative mx-auto grid gap-y-12 sm:col-span-3 sm:col-start-3 sm:ml-4 sm:grid-cols-3 sm:gap-y-16 sm:gap-x-5">
         {data.map((d) => (
           <TimeCard
             key={d.title}

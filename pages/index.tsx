@@ -3,13 +3,13 @@ import Dashboard from '../components/Dashboard'
 
 export default function Home() {
   return (
-    <div className="min-w-screen min-h-screen bg-[#0f1424] py-20 font-Rubik">
+    <div>
       <Head>
         <title>Time Tracking Dashboard</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className="min-w-screen flex min-h-screen items-center justify-center bg-[#0f1424] py-20 font-Rubik">
         <Dashboard />
       </main>
     </div>
